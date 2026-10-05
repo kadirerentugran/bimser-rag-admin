@@ -30,7 +30,7 @@ export default function DatabasePage() {
         return;
       }
 
-      const res = await fetch("http://localhost:8000/db/documents", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/db/documents", {
         headers: { "x-api-key": apiKey },
       });
 
@@ -53,7 +53,7 @@ export default function DatabasePage() {
   const handleDownload = async (id: string, slug: string) => {
     try {
       const apiKey = Cookies.get("admin_key");
-      const res = await fetch(`http://localhost:8000/db/documents/${id}/download`, {
+      const res = await fetch(${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/db/documents/${id}/download`, {
         headers: { "x-api-key": apiKey || "" },
       });
 
@@ -79,7 +79,7 @@ export default function DatabasePage() {
 
     try {
       const apiKey = Cookies.get("admin_key");
-      const res = await fetch(`http://localhost:8000/db/documents/${id}`, {
+      const res = await fetch(${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/db/documents/${id}`, {
         method: "DELETE",
         headers: { "x-api-key": apiKey || "" },
       });
