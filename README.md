@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <h1>🖥️ Bimser RAG Admin Paneli</h1>
+  <p>Şirket İçi Doküman Yönetimi, Yapay Zeka ve Vektör Veritabanı Kontrol Merkezi</p>
+</div>
 
-## Getting Started
+---
 
-First, run the development server:
+## 📌 Proje Hakkında
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Bu proje, Bimser RAG (Retrieval-Augmented Generation) sisteminin kalbini oluşturan **Yönetim Paneli (Frontend)** uygulamasıdır. 
+Kullanıcılar bu panel üzerinden sisteme Word veya PDF belgeleri yükleyebilir, belgelerin vektörel parçalara (chunk) ayrılmasını takip edebilir ve PostgreSQL veritabanındaki indekslenmiş dokümanları yönetebilirler.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🌟 Öne Çıkan Özellikler
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   **Canlı Durum Takibi (Dashboard):** Veritabanı, Ollama (Llama 3.1) ve indekslenmiş doküman sayısını anlık takip etme.
+*   **Doküman Yükleme & Analiz:** Yüklenen belgeleri otomatik olarak `pgvector` uzayına dahil etme.
+*   **Sistem Testi (Chat):** Yüklenen belgeler üzerinden RAG sisteminin nasıl cevap verdiğini direkt panel üzerinden test edebilme.
+*   **Modern Arayüz:** Next.js 14, Tailwind CSS ve TypeScript ile geliştirilmiş hızlı ve responsive tasarım.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📸 Ekran Görüntüleri
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Ana Kontrol Paneli (Dashboard)
+Sistemdeki tüm servislerin anlık sağlık durumunu ve vektör istatistiklerini gösterir.
+![Dashboard](docs/dashboard.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Doküman Yönetimi (Veritabanı)
+PostgreSQL'e indekslenmiş tüm dokümanların listesi ve silme/indirme işlemleri.
+![Veritabanı](docs/db.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Belge Yükleme ve Çözümleme (Parsing)
+Sisteme Word (.docx) belgelerinin aktarılması ve yapay zeka tarafından parse edilmesi.
+![Upload](docs/upload.png)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Mimari ve Teknolojiler
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   **Framework:** Next.js 14 (App Router)
+*   **Dil:** TypeScript
+*   **Stil:** Tailwind CSS
+*   **Bağlantı:** FastAPI Backend (`bimser-rag-api`) ile entegre.
+
+---
+
+## 🚀 Kurulum (Local Development)
+
+Paneli bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
+
+### Gereksinimler
+*   Node.js (v18 veya üzeri)
+*   Arka planda `bimser-rag-api` projesinin (Backend) 8000 portunda çalışıyor olması gerekir.
+
+### Adım Adım Kurulum
+
+1.  **Projeyi Klonlayın:**
+    ```bash
+    git clone https://github.com/kadirerentugran/bimser-rag-admin.git
+    cd bimser-rag-admin
+    ```
+
+2.  **Bağımlılıkları Kurun:**
+    ```bash
+    npm install --legacy-peer-deps
+    ```
+
+3.  **Çalıştırın:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Erişim:**
+    Tarayıcınızdan şu adrese giderek paneli açabilirsiniz:
+    👉 **[http://localhost:3000](http://localhost:3000)**
+
+*(Not: Login ekranı geliştirme ortamında bypass edilmiştir, herhangi bir değer girerek geçebilirsiniz.)*
+
+---
+
+<div align="center">
+  <p>👨‍💻 <i>Kadir Eren Tuğran tarafından Bimser için özel olarak tasarlanmıştır.</i></p>
+</div>
