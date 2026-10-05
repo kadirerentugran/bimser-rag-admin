@@ -30,7 +30,7 @@ export default function DatabasePage() {
         return;
       }
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/db/documents", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/db/documents`, {
         headers: { "x-api-key": apiKey },
       });
 
