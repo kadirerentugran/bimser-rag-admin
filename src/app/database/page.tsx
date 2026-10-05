@@ -177,7 +177,7 @@ export default function DatabasePage() {
                 ))
               )}
             </tbody>
-          </table></div>
+          </table>
         </div>
       </div>
     </div>
