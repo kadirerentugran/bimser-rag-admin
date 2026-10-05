@@ -1,16 +1,16 @@
 <div align="center">
-  <h1>🖥️ Bimser RAG Admin Paneli</h1>
+  <h1>Bimser RAG Admin Paneli</h1>
   <p>Şirket İçi Doküman Yönetimi, Yapay Zeka ve Vektör Veritabanı Kontrol Merkezi</p>
 </div>
 
 ---
 
-## 📌 Proje Hakkında
+## Proje Hakkında
 
 Bu proje, Bimser RAG (Retrieval-Augmented Generation) sisteminin kalbini oluşturan **Yönetim Paneli (Frontend)** uygulamasıdır. 
 Kullanıcılar bu panel üzerinden sisteme Word veya PDF belgeleri yükleyebilir, belgelerin vektörel parçalara (chunk) ayrılmasını takip edebilir ve PostgreSQL veritabanındaki indekslenmiş dokümanları yönetebilirler.
 
-### 🌟 Öne Çıkan Özellikler
+### Öne Çıkan Özellikler
 
 *   **Canlı Durum Takibi (Dashboard):** Veritabanı, Ollama (Llama 3.1) ve indekslenmiş doküman sayısını anlık takip etme.
 *   **Doküman Yükleme & Analiz:** Yüklenen belgeleri otomatik olarak `pgvector` uzayına dahil etme.
@@ -19,7 +19,7 @@ Kullanıcılar bu panel üzerinden sisteme Word veya PDF belgeleri yükleyebilir
 
 ---
 
-## 📸 Ekran Görüntüleri
+## Ekran Görüntüleri
 
 ### 1. Ana Kontrol Paneli (Dashboard)
 Sistemdeki tüm servislerin anlık sağlık durumunu ve vektör istatistiklerini gösterir.
@@ -35,7 +35,7 @@ Sisteme Word (.docx) belgelerinin aktarılması ve yapay zeka tarafından parse 
 
 ---
 
-## 🛠️ Mimari ve Teknolojiler
+## Mimari ve Teknolojiler
 
 *   **Framework:** Next.js 14 (App Router)
 *   **Dil:** TypeScript
@@ -44,7 +44,7 @@ Sisteme Word (.docx) belgelerinin aktarılması ve yapay zeka tarafından parse 
 
 ---
 
-## 🚀 Kurulum (Local Development)
+## Kurulum (Local Development)
 
 Paneli bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
@@ -72,7 +72,7 @@ Paneli bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
 4.  **Erişim:**
     Tarayıcınızdan şu adrese giderek paneli açabilirsiniz:
-    👉 **[http://localhost:3000](http://localhost:3000)**
+    **[http://localhost:3000](http://localhost:3000)**
 
 *(Not: Login ekranı geliştirme ortamında bypass edilmiştir, herhangi bir değer girerek geçebilirsiniz.)*
 
