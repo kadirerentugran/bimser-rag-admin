@@ -77,7 +77,3 @@ Paneli bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 *(Not: Login ekranı geliştirme ortamında bypass edilmiştir, herhangi bir değer girerek geçebilirsiniz.)*
 
 ---
-
-<div align="center">
-  <p>👨‍💻 <i>Kadir Eren Tuğran tarafından Bimser için özel olarak tasarlanmıştır.</i></p>
-</div>
