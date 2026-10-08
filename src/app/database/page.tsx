@@ -27,7 +27,7 @@ export default function DatabasePage() {
 
 
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/db/documents`, {
-        headers: { "x-api-key": apiKey },
+        headers: { "x-api-key": apiKey || "" },
       });
 
       if (!res.ok) throw new Error("Veriler alınamadı");
