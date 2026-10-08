@@ -24,11 +24,7 @@ export default function DatabasePage() {
   const fetchDocuments = async () => {
     try {
       const apiKey = Cookies.get("admin_key");
-      if (!apiKey) {
-        toast.error("API Anahtarı bulunamadı.");
-        setLoading(false);
-        return;
-      }
+
 
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/db/documents`, {
         headers: { "x-api-key": apiKey },
